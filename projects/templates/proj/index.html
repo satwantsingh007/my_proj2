@@ -1,6 +1,33 @@
+
 {% extends 'base.html' %}
 
+    {% block proj %}
 
- {% block proj %}
-<h1 align="center"> WELCOME TO CALL OF DUTY PROJECT</h1>
-    {% endblock %}
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row" >
+       {% for var_proj in project.all %}
+
+
+        <div class="col-md-4" >
+          <div class="card mb-4 shadow-sm" >
+              <img src="{{ var_proj.image.url }}" width="100%" height="100%"/>
+            <div class="card-body">
+              <p class="card-text" align="center">{{ var_proj.summary }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'detail' var_proj.id  %}">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

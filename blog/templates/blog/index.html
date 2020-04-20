@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
     {% block proj %}
-<h1 align="center">WELCOME TO PUBG MOBILE BLOG</h1>
+        {% for blog in all_blog.all %}
+            <a href="{% url 'blog_detail' blog.id  %}"><h1 align="center">{{ blog.title }}</h1></a> <br>
+            <center>
+            <img class= "img-fluid" src="{{ blog.image.url }}" text-align="center" height="200px" width="200px"><br>
+            </center>
+            <p align="center" >{{ blog.body }}</p><br>
+            <p align="center" >{{ blog.summary }}</p><br>
+        {% endfor %}
+
+
     {% endblock %}

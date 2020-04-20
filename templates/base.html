@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+<link href="../static/style.css" rel="stylesheet">
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -47,7 +47,7 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">BLOG</a>
+  <a class="navbar-brand" href="{% url 'home' %}">CHATHA007</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -66,10 +66,10 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>PUNJABI ACTORS</h1>
+      <h1>ACTORS</h1>
       <p class="lead text-muted">After impressing the audiences with his earnest performance in Udta Punjab, Diljit Dosanjh is back with Phillauri alongside Anushka Sharma. The film, which released today, is garnering accolades from all corners for its unique storyline and the performances by the protagonists. Anushka Sharma plays a ghost while Diljit Dosanjh plays a Sufi singer in this dreamy tale which is also a refreshing take on the usual potboilers Bollywood churns out, year after year.</p>
       <p>
-        <a href="udemy@gmail.com" class="btn btn-primary my-2">Email</a>
+        <a href={% static 'Yoyal_Varthe.pdf' %} class="btn btn-primary my-2">Download Resume</a>
       </p>
     </div>
   </section>
